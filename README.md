@@ -1,4 +1,4 @@
-# pipdrive's Persons
+# reactPro's Persons
 
 
 List of persons on the basis of React + Redux
