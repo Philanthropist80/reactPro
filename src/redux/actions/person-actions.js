@@ -112,15 +112,9 @@ export function deletePerson(index) {
 
     const id = getState().personPage.persons.data[index].id
 
-    return fetch(
-      base_url +
-        '/persons/' +
-        id +
-        '?api_token=9959f46241f9ad08e4d7760d4b4565fad7b68786',
-      {
-        method: 'DELETE'
-      }
-    )
+    return fetch(base_url + '/persons/' + id + '?api_token=' + api_token, {
+      method: 'DELETE'
+    })
       .then(response => {
         console.log(response)
         if (response.ok) {
@@ -159,19 +153,16 @@ export function addPerson(person) {
       type: ADD_PERSON_REQUEST
     })
 
-    return fetch(
-      base_url + '/persons/?api_token=9959f46241f9ad08e4d7760d4b4565fad7b68786',
-      {
-        method: 'POST',
-        mode: 'cors',
-        cache: 'no-cache',
-        credentials: 'same-origin',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(person)
-      }
-    )
+    return fetch(base_url + '/persons/?api_token=' + api_token, {
+      method: 'POST',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(person)
+    })
       .then(response => {
         console.log(response)
         if (response.ok) {

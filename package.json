@@ -1,9 +1,9 @@
 {
-  "name": "pipedrive",
+  "name": "reactPro",
   "version": "1.0.0",
   "private": true,
   "author": "Taimoor Adil Badshah <taimurad@hotmail.com>",
-  "homepage": "https://github.com/Philanthropist80/pipedrive",
+  "homepage": "https://github.com/Philanthropist80/reactPro",
   "dependencies": {
     "bootstrap": "4.3.1",
     "formik": "1.5.4",
